@@ -81,7 +81,7 @@
                 @method('PUT')
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">Viber Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="viber" placeholder="Enter viber Link">
+                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="viber" placeholder="Enter viber Link" value="{{ $text->viber }}">
                     @error('viber')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
@@ -89,7 +89,7 @@
 
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">GameLink </label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="game_site_link" placeholder="Enter game_site_link">
+                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="game_site_link" placeholder="Enter game_site_link" value="{{ $text->game_site_link }}">
                     @error('game_site_link')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
@@ -97,7 +97,7 @@
 
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">FBPage Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="facebook_page" placeholder="Enter facebook_page">
+                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="facebook_page" placeholder="Enter facebook_page" value="{{ $text->facebook_page }}">
                     @error('facebook_page')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
@@ -105,7 +105,7 @@
 
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">Line Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="line" placeholder="Enter line">
+                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="line" placeholder="Enter line" value="{{ $text->line }}">
                     @error('line')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
@@ -113,7 +113,7 @@
 
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">Telegram Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="telegram" placeholder="Enter telegram">
+                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="telegram" placeholder="Enter telegram" value="{{ $text->telegram }}">
                     @error('telegram')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
@@ -121,7 +121,7 @@
 
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">Messager Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="messager" placeholder="Enter messager">
+                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="messager" placeholder="Enter messager" value="{{ $text->messager }}">
                     @error('messager')
                     <span class="text-danger d-block">*{{ $message }}</span>
                     @enderror
