@@ -76,61 +76,62 @@
               </div>
             </div>
             <div class="card-body">
-              <form role="form" class="text-start" action="{{ route('admin.contact-links.update', $text->id) }}" method="post">
-                @csrf
-                @method('PUT')
-                <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">Viber Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="viber" placeholder="Enter viber Link" value="{{ $text->viber }}">
-                    @error('viber')
-                    <span class="text-danger d-block">*{{ $message }}</span>
-                    @enderror
-                </div>
+            <form action="{{ route('admin.contact_links.update', $text->id) }}" method="POST">
+            @csrf
+            @method('PUT')
 
-                <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">GameLink </label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="game_site_link" placeholder="Enter game_site_link" value="{{ $text->game_site_link }}">
-                    @error('game_site_link')
-                    <span class="text-danger d-block">*{{ $message }}</span>
-                    @enderror
-                </div>
+            <div class="mb-3">
+                <label class="form-label text-dark fw-bold" for="viber">Viber Link</label>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="viber" name="viber" placeholder="Enter Viber Link" value="{{ old('viber', $text->viber) }}" required>
+                @error('viber')
+                <span class="text-danger d-block">*{{ $message }}</span>
+                @enderror
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">FBPage Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="facebook_page" placeholder="Enter facebook_page" value="{{ $text->facebook_page }}">
-                    @error('facebook_page')
-                    <span class="text-danger d-block">*{{ $message }}</span>
-                    @enderror
-                </div>
+            <div class="mb-3">
+                <label class="form-label text-dark fw-bold" for="game_site_link">Game Site Link</label>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="game_site_link" name="game_site_link" placeholder="Enter Game Site Link" value="{{ old('game_site_link', $text->game_site_link) }}" required>
+                @error('game_site_link')
+                <span class="text-danger d-block">*{{ $message }}</span>
+                @enderror
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">Line Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="line" placeholder="Enter line" value="{{ $text->line }}">
-                    @error('line')
-                    <span class="text-danger d-block">*{{ $message }}</span>
-                    @enderror
-                </div>
+            <div class="mb-3">
+                <label class="form-label text-dark fw-bold" for="facebook_page">Facebook Page Link</label>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="facebook_page" name="facebook_page" placeholder="Enter Facebook Page Link" value="{{ old('facebook_page', $text->facebook_page) }}" required>
+                @error('facebook_page')
+                <span class="text-danger d-block">*{{ $message }}</span>
+                @enderror
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">Telegram Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="telegram" placeholder="Enter telegram" value="{{ $text->telegram }}">
-                    @error('telegram')
-                    <span class="text-danger d-block">*{{ $message }}</span>
-                    @enderror
-                </div>
+            <div class="mb-3">
+                <label class="form-label text-dark fw-bold" for="line">Line Link</label>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="line" name="line" placeholder="Enter Line Link" value="{{ old('line', $text->line) }}" required>
+                @error('line')
+                <span class="text-danger d-block">*{{ $message }}</span>
+                @enderror
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label text-dark fw-bold" for="inputEmail1">Messager Link</label>
-                    <input type="text" class="form-control border border-1 border-secondary px-2" id="inputEmail1" name="messager" placeholder="Enter messager" value="{{ $text->messager }}">
-                    @error('messager')
-                    <span class="text-danger d-block">*{{ $message }}</span>
-                    @enderror
-                </div>
+            <div class="mb-3">
+                <label class="form-label text-dark fw-bold" for="telegram">Telegram Link</label>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="telegram" name="telegram" placeholder="Enter Telegram Link" value="{{ old('telegram', $text->telegram) }}" required>
+                @error('telegram')
+                <span class="text-danger d-block">*{{ $message }}</span>
+                @enderror
+            </div>
 
-                <div class="mb-3">
-                  <button class="btn btn-primary" type="submit">Edit</button>
-                </div>
-              </form>
+            <div class="mb-3">
+                <label class="form-label text-dark fw-bold" for="messager">Messenger Link</label>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="messager" name="messager" placeholder="Enter Messenger Link" value="{{ old('messager', $text->messager) }}" required>
+                @error('messager')
+                <span class="text-danger d-block">*{{ $message }}</span>
+                @enderror
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Edit</button>
+            </div>
+        </form>
             </div>
           </div>
         </div>

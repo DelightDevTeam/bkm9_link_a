@@ -62,7 +62,7 @@
 <div class="row">
   <div class="col-12">
     <div class="container mb-3">
-      <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.text.index') }}">
+      <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.contact_links.index') }}">
         <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
       </a>
     </div>
@@ -76,7 +76,7 @@
               </div>
             </div>
             <div class="card-body">
-              <form role="form" class="text-start" action="{{ route('admin.contact-links.store') }}" method="post">
+              <form role="form" class="text-start" action="{{ route('admin.contact_links.store') }}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label text-dark fw-bold" for="inputEmail1">Viber Link</label>

@@ -40,7 +40,7 @@ class ContactLinkController extends Controller
             'messager' => $request->messager,
         ]);
 
-        return redirect(route('admin.contact-links.index'))->with('success', 'New Link Created Successfully.');
+        return redirect(route('admin.contact_links.index'))->with('success', 'New Link Created Successfully.');
     }
 
     /**
@@ -70,9 +70,17 @@ class ContactLinkController extends Controller
      */
     public function update(Request $request, ContactLink $text)
     {
-        // $request->validate([
-        //     'text' => 'required',
-        // ]);
+        // Validate the request data
+        $request->validate([
+            'viber' => 'required|string|max:255',
+            'game_site_link' => 'required|string|max:255',
+            'facebook_page' => 'required|string|max:255',
+            'line' => 'required|string|max:255',
+            'telegram' => 'required|string|max:255',
+            'messager' => 'required|string|max:255',
+        ]);
+
+        // Update the contact link with the validated data
         $text->update([
             'viber' => $request->viber,
             'game_site_link' => $request->game_site_link,
@@ -82,7 +90,8 @@ class ContactLinkController extends Controller
             'messager' => $request->messager,
         ]);
 
-        return redirect(route('admin.contact-links.index'))->with('success', 'Contact Link Updated Successfully.');
+        // Redirect back to the contact links index with a success message
+        return redirect(route('admin.contact_links.index'))->with('success', 'Contact Link Updated Successfully.');
     }
 
     /**
