@@ -16,7 +16,8 @@ class BannerController extends Controller
 
     public function index()
     {
-        $data = Banner::all();
+        //$data = Banner::all();
+        $data = Banner::latest()->take(3)->get();
 
         return $this->success($data);
     }
