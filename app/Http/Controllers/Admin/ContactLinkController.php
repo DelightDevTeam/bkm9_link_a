@@ -40,7 +40,7 @@ class ContactLinkController extends Controller
             'messager' => $request->messager,
         ]);
 
-        return redirect(route('admin.contact_links.index'))->with('success', 'New Link Created Successfully.');
+        return redirect(route('admin.linkss.index'))->with('success', 'New Link Created Successfully.');
     }
 
     /**
@@ -59,40 +59,44 @@ class ContactLinkController extends Controller
      public function edit($id)
     {
         // Retrieve the ContactLink model by its ID or fail if not found
-        $text = ContactLink::findOrFail($id);
+        $text_update = ContactLink::findOrFail($id);
 
         // Pass the retrieved data to the 'admin.contact.edit' view
-        return view('admin.contact.edit', compact('text'));
+        return view('admin.contact.edit', compact('text_update'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ContactLink $text)
-    {
-        // Validate the request data
-        $request->validate([
-            'viber' => 'required|string|max:255',
-            'game_site_link' => 'required|string|max:255',
-            'facebook_page' => 'required|string|max:255',
-            'line' => 'required|string|max:255',
-            'telegram' => 'required|string|max:255',
-            'messager' => 'required|string|max:255',
-        ]);
+    public function update(Request $request, $id)
+{
+    // Validate the request data
+    $request->validate([
+        'viber' => 'required|string|max:255',
+        'game_site_link' => 'required|string|max:255',
+        'facebook_page' => 'required|string|max:255',
+        'line' => 'required|string|max:255',
+        'telegram' => 'required|string|max:255',
+        'messager' => 'required|string|max:255',
+    ]);
 
-        // Update the contact link with the validated data
-        $text->update([
-            'viber' => $request->viber,
-            'game_site_link' => $request->game_site_link,
-            'facebook_page' => $request->facebook_page,
-            'line' => $request->line,
-            'telegram' => $request->telegram,
-            'messager' => $request->messager,
-        ]);
+    // Find the specific contact link by id
+    $contactLink = ContactLink::findOrFail($id);
 
-        // Redirect back to the contact links index with a success message
-        return redirect(route('admin.contact_links.index'))->with('success', 'Contact Link Updated Successfully.');
-    }
+    // Update the contact link with the validated data
+    $contactLink->update([
+        'viber' => $request->viber,
+        'game_site_link' => $request->game_site_link,
+        'facebook_page' => $request->facebook_page,
+        'line' => $request->line,
+        'telegram' => $request->telegram,
+        'messager' => $request->messager,
+    ]);
+
+    // Redirect back to the contact links index with a success message
+    return redirect(route('admin.linkss.index'))->with('success', 'Contact Link Updated Successfully.');
+}
+
 
     /**
      * Remove the specified resource from storage.

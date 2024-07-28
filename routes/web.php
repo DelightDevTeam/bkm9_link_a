@@ -46,7 +46,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
   Route::resource('banners', BannerController::class);
   Route::resource('text', BannerTextController::class);
-  Route::resource('contact_links', ContactLinkController::class);
+  Route::resource('linkss', ContactLinkController::class);
 
 });
 

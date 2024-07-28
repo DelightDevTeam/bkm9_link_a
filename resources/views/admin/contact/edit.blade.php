@@ -62,7 +62,7 @@
 <div class="row">
   <div class="col-12">
     <div class="container mb-3">
-      <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.contact_links.index') }}">
+      <a class="btn btn-icon btn-2 btn-primary float-end me-5" href="{{ route('admin.linkss.index') }}">
         <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
       </a>
     </div>
@@ -76,13 +76,13 @@
               </div>
             </div>
             <div class="card-body">
-            <form action="{{ route('admin.contact_links.update', $text->id) }}" method="POST">
+            <form action="{{ route('admin.linkss.update', $text_update->id) }}" method="POST">
             @csrf
             @method('PUT')
 
             <div class="mb-3">
                 <label class="form-label text-dark fw-bold" for="viber">Viber Link</label>
-                <input type="text" class="form-control border border-1 border-secondary px-2" id="viber" name="viber" placeholder="Enter Viber Link" value="{{ old('viber', $text->viber) }}" required>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="viber" name="viber" placeholder="Enter Viber Link" value="{{ old('viber', $text_update->viber) }}" required>
                 @error('viber')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
@@ -90,7 +90,7 @@
 
             <div class="mb-3">
                 <label class="form-label text-dark fw-bold" for="game_site_link">Game Site Link</label>
-                <input type="text" class="form-control border border-1 border-secondary px-2" id="game_site_link" name="game_site_link" placeholder="Enter Game Site Link" value="{{ old('game_site_link', $text->game_site_link) }}" required>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="game_site_link" name="game_site_link" placeholder="Enter Game Site Link" value="{{ old('game_site_link', $text_update->game_site_link) }}" required>
                 @error('game_site_link')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
@@ -98,7 +98,7 @@
 
             <div class="mb-3">
                 <label class="form-label text-dark fw-bold" for="facebook_page">Facebook Page Link</label>
-                <input type="text" class="form-control border border-1 border-secondary px-2" id="facebook_page" name="facebook_page" placeholder="Enter Facebook Page Link" value="{{ old('facebook_page', $text->facebook_page) }}" required>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="facebook_page" name="facebook_page" placeholder="Enter Facebook Page Link" value="{{ old('facebook_page', $text_update->facebook_page) }}" required>
                 @error('facebook_page')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
@@ -106,7 +106,7 @@
 
             <div class="mb-3">
                 <label class="form-label text-dark fw-bold" for="line">Line Link</label>
-                <input type="text" class="form-control border border-1 border-secondary px-2" id="line" name="line" placeholder="Enter Line Link" value="{{ old('line', $text->line) }}" required>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="line" name="line" placeholder="Enter Line Link" value="{{ old('line', $text_update->line) }}" required>
                 @error('line')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
@@ -114,7 +114,7 @@
 
             <div class="mb-3">
                 <label class="form-label text-dark fw-bold" for="telegram">Telegram Link</label>
-                <input type="text" class="form-control border border-1 border-secondary px-2" id="telegram" name="telegram" placeholder="Enter Telegram Link" value="{{ old('telegram', $text->telegram) }}" required>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="telegram" name="telegram" placeholder="Enter Telegram Link" value="{{ old('telegram', $text_update->telegram) }}" required>
                 @error('telegram')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
@@ -122,14 +122,14 @@
 
             <div class="mb-3">
                 <label class="form-label text-dark fw-bold" for="messager">Messenger Link</label>
-                <input type="text" class="form-control border border-1 border-secondary px-2" id="messager" name="messager" placeholder="Enter Messenger Link" value="{{ old('messager', $text->messager) }}" required>
+                <input type="text" class="form-control border border-1 border-secondary px-2" id="messager" name="messager" placeholder="Enter Messenger Link" value="{{ old('messager', $text_update->messager) }}" required>
                 @error('messager')
                 <span class="text-danger d-block">*{{ $message }}</span>
                 @enderror
             </div>
 
             <div class="mb-3">
-                <button class="btn btn-primary" type="submit">Edit</button>
+                <button class="btn btn-primary" type="submit">Update</button>
             </div>
         </form>
             </div>

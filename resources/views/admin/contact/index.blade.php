@@ -27,7 +27,7 @@
           </div>
           <div class="ms-auto my-auto mt-lg-0 mt-4">
             <div class="ms-auto my-auto">
-              <a href="{{ route('admin.contact_links.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; New Contact Link </a>
+              <a href="{{ route('admin.linkss.create') }}" class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; New Contact Link </a>
               <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv" type="button" name="button">Export</button>
             </div>
           </div>
@@ -61,11 +61,11 @@
 
               {{-- <td class="text-sm font-weight-normal">{{ $text->created_at->format('M j, Y') }}</td> --}}
               <td>
-                <a href="{{ route('admin.contact_links.edit', $text->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Edit Banner"><i class="material-icons-round text-secondary position-relative text-lg">mode_edit</i></a>
-                <a href="{{ route('admin.contact_links.show', $text->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Preview Banner Detail">
+                <a href="{{ route('admin.linkss.edit', $text->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Edit Banner"><i class="material-icons-round text-secondary position-relative text-lg">mode_edit</i></a>
+                <a href="{{ route('admin.linkss.show', $text->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Preview Banner Detail">
                   <i class="material-icons text-secondary position-relative text-lg">visibility</i>
                 </a>
-                <form class="d-inline" action="{{ route('admin.contact_links.destroy', $text->id) }}" method="POST">
+                <form class="d-inline" action="{{ route('admin.linkss.destroy', $text->id) }}" method="POST">
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="transparent-btn" data-bs-toggle="tooltip" data-bs-original-title="Delete Banner">

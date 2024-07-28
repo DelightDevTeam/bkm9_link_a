@@ -64,7 +64,7 @@
     <div class="container mt-0">
       <div class="d-flex justify-content-between">
         <h4>Contact Link's Detail</h4>
-        <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.contact_links.index') }}">
+        <a class="btn btn-icon btn-2 btn-primary" href="{{ route('admin.linkss.index') }}">
           <span class="btn-inner--icon mt-1"><i class="material-icons">arrow_back</i>Back</span>
         </a>
       </div>
