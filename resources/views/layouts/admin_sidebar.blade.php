@@ -88,6 +88,13 @@
               <span class="sidenav-normal  ms-2  ps-1"> Banner Text </span>
             </a>
           </li>
+
+          <li class="nav-item ">
+            <a class="nav-link text-white " href="{{ route('admin.contact-links.index') }}">
+              <span class="sidenav-mini-icon"> <i class="fa-solid fa-panorama"></i> </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Contact Link </span>
+            </a>
+          </li>
         </ul>
       </div>
     </li>

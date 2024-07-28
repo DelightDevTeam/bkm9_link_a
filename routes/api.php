@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('banner', [BannerController::class, 'index']);
 Route::get('bannerText', [BannerController::class, 'bannerText']);
+Route::get('contacts', [BannerController::class, 'ContactApiLink']);
+
