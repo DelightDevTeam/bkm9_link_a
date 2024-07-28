@@ -119,7 +119,7 @@
               </tr>
               <tr>
                 <td>Created Date</td>
-                <td>{!! $text->created_at->format('F j, Y') !!}</td>
+                <td>{{ $text->created_at }}</td>
               </tr>
             </tbody>
           </table>
