@@ -46,16 +46,22 @@ class ContactLinkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ContactLink $text)
+    public function show($id)
     {
+        $text = ContactLink::findOrFail($id);
+        
         return view('admin.contact.show', compact('text'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ContactLink $text)
+     public function edit($id)
     {
+        // Retrieve the ContactLink model by its ID or fail if not found
+        $text = ContactLink::findOrFail($id);
+
+        // Pass the retrieved data to the 'admin.contact.edit' view
         return view('admin.contact.edit', compact('text'));
     }
 
