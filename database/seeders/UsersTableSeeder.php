@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             [
                 'id'             => 1,
                 'name'           => 'Admin',
-                'phone'          => '0911111111',
+                'phone'          => '09253508582',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'agent_id'       => 1,
                 'remember_token' => null,
