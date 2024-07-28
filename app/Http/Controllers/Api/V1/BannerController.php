@@ -28,23 +28,23 @@ class BannerController extends Controller
         return $this->success($data);
     }
 
-     public function ContactApiLink(): JsonResponse
-    {
-        $data = ContactLink::latest()->take(6)->get();
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Latest 6 Contact Links retrieved successfully',
-            'data' => $data
-        ]);
-    }
-
-    // public function ContactApiLink()
+    //  public function ContactApiLink(): JsonResponse
     // {
-    //     $data = ContactLink::latest()->first();
+    //     $data = ContactLink::latest()->take(6)->get();
 
-    //     return $this->success($data);
+    //     return response()->json([
+    //         'success' => true,
+    //         'message' => 'Latest 6 Contact Links retrieved successfully',
+    //         'data' => $data
+    //     ]);
     // }
+
+    public function ContactApiLink()
+    {
+        $data = ContactLink::latest()->first();
+
+        return $this->success($data);
+    }
 
     // public function AdsBannerIndex()
     // {

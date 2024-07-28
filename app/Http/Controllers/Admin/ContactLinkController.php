@@ -28,11 +28,16 @@ class ContactLinkController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'text' => 'required',
-        ]);
+        // $request->validate([
+        //     'text' => 'required',
+        // ]);
         ContactLink::create([
-            'text' => $request->text,
+            'viber' => $request->viber,
+            'game_site_link' => $request->game_site_link,
+            'facebook_page' => $request->facebook_page,
+            'line' => $request->line,
+            'telegram' => $request->telegram,
+            'messager' => $request->messager,
         ]);
 
         return redirect(route('admin.contact-links.index'))->with('success', 'New Link Created Successfully.');
@@ -59,11 +64,16 @@ class ContactLinkController extends Controller
      */
     public function update(Request $request, ContactLink $text)
     {
-        $request->validate([
-            'text' => 'required',
-        ]);
+        // $request->validate([
+        //     'text' => 'required',
+        // ]);
         $text->update([
-            'text' => $request->text,
+            'viber' => $request->viber,
+            'game_site_link' => $request->game_site_link,
+            'facebook_page' => $request->facebook_page,
+            'line' => $request->line,
+            'telegram' => $request->telegram,
+            'messager' => $request->messager,
         ]);
 
         return redirect(route('admin.contact-links.index'))->with('success', 'Contact Link Updated Successfully.');

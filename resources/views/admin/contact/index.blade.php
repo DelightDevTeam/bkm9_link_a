@@ -38,8 +38,13 @@
           <thead class="thead-light">
             <tr>
               <th>#</th>
-              <th>Link</th>
-              <th>Created At</th>
+              <th>Viber</th>
+              <th>GameLink</th>
+              <th>FBPage</th>
+              <th>Line</th>
+              <th>Telegram</th>
+              <th>Messager</th>
+              {{-- <th>Created At</th> --}}
               <th>Actions</th>
             </tr>
           </thead>
@@ -47,8 +52,14 @@
             @foreach($texts as $key => $text)
             <tr>
               <td class="text-sm font-weight-normal">{{ ++$key }}</td>
-              <td>{{ $text->text }}</td>
-              <td class="text-sm font-weight-normal">{{ $text->created_at->format('M j, Y') }}</td>
+              <td>{{ $text->viber }}</td>
+              <td>{{ $text->game_site_link }}</td>
+              <td>{{ $text->facebook_page }}</td>
+              <td>{{ $text->line }}</td>
+              <td>{{ $text->telegram }}</td>
+              <td>{{ $text->messager }}</td>
+
+              {{-- <td class="text-sm font-weight-normal">{{ $text->created_at->format('M j, Y') }}</td> --}}
               <td>
                 <a href="{{ route('admin.contact-links.edit', $text->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Edit Banner"><i class="material-icons-round text-secondary position-relative text-lg">mode_edit</i></a>
                 <a href="{{ route('admin.contact-links.show', $text->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Preview Banner Detail">

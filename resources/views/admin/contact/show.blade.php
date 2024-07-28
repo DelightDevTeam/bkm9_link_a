@@ -77,10 +77,46 @@
                 <td>{!! $text->id !!}</td>
               </tr>
               <tr>
-                <td class="text-right">Contack Link </td>
+                <td class="text-right">Viber Link </td>
                 <td>
-                  {{ $text->text }}
+                  {{ $text->viber }}
                 </td>
+              </tr>
+
+              <tr>
+                <td class="text-right">GameLink  </td>
+                <td>
+                  {{ $text->game_site_link }}
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-right">facebook_page Link </td>
+                <td>
+                  {{ $text->facebook_page }}
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-right">Line Link </td>
+                <td>
+                  {{ $text->line }}
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-right">Telegram Link </td>
+                <td>
+                  {{ $text->telegram }}
+                </td>
+              </tr>
+
+              <tr>
+                <td class="text-right">Messager Link </td>
+                <td>
+                  {{ $text->messager }}
+                </td>
+              </tr>
               <tr>
                 <td>Created Date</td>
                 <td>{!! $text->created_at->format('F j, Y') !!}</td>

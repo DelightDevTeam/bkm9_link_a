@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('contact_links', function (Blueprint $table) {
             $table->id();
-            $table->string('text');
+            $table->string('viber')->nullable();
+            $table->string('game_site_link')->nullable();
+            $table->string('facebook_page')->nullable();
+            $table->string('line')->nullable();
+            $table->string('telegram')->nullable();
+            $table->string('messager')->nullable();
             $table->timestamps();
         });
     }

@@ -9,6 +9,11 @@ class ContactLink extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'text',
+        'viber',
+        'game_site_link',
+        'facebook_page',
+        'line',
+        'telegram',
+        'messager'
     ];
 }
