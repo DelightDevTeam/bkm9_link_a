@@ -43,7 +43,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed
-            return redirect('/home')->with('success', 'Login Success!');
+            return redirect('/')->with('success', 'Login Success!');
         } else {
             return redirect()->back()->with('error', 'Invalid credentials. Please try again.');
         }
