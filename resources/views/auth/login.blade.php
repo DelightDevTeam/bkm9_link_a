@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('authentication.master')
 @section('content')
 <div class="row">
     <div
